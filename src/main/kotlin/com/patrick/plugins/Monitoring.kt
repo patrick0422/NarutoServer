@@ -8,9 +8,5 @@ import io.ktor.server.plugins.callloging.*
 import io.ktor.server.response.*
 
 fun Application.configureMonitoring() {
-    install(CallLogging) {
-        level = Level.INFO
-        filter { call -> call.request.path().startsWith("/") }
-    }
-
+    install(CallLogging)
 }
